@@ -48,7 +48,7 @@
  .nav-bg-img {
   background-image: url("https://s1.1zoom.me/b4430/914/Sunrises_and_sunsets_Mountains_Lake_Scenery_556221_1920x1080.jpg");
 
-  min-height: 380px;
+  min-height: 580px;
   max-height: 780px;
 
   /* Center and scale the image nicely */
@@ -78,6 +78,23 @@
 .ben-hr {
     border: 3px solid rgb(124, 205, 230);
     border-radius: 5px;
+}
+
+
+.card-img-caption {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+  
+.card-img-caption .card-img-top {
+  z-index: 0;
+}
+    
+.card-img-caption .card-text {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 

@@ -205,25 +205,25 @@
                                     <div class="row">
                                         <ul class="nav mt-2 mt-lg-0">
                                             <li class="nav-item">
-                                                <a class="content-link" href="#"><ins>Overview</ins></a>
+                                                <a class="content-link btn-overview"><ins>Overview</ins></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Accomodation</a>
+                                                <a class="content-link btn-accomodation">Accomodation</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Facilities</a>
+                                                <a class="content-link btn-facilities"+>Facilities</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Food</a>
+                                                <a class="content-link btn-food">Food</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Activities</a>
+                                                <a class="content-link btn-activities">Activities</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Location</a>
+                                                <a class="content-link btn-location">Location</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="content-link" href="#">Fine Print</a>
+                                                <a class="content-link btn-fineprint">Fine Print</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -253,7 +253,7 @@
                             <!-- Title Card -->
                             <div class="col-md-1"></div>
                             <div class="col-md-9">
-                                <h2 class="display-6 card-title">DETAILS</h2>
+                                <h2 class="display-6 card-title">BOOK NOW</h2>
                                 <hr class="ben-hr">
                             </div>
                             <!-- Card Body -->
@@ -277,7 +277,7 @@
                                     </tr>
                                     <tr>
                                         <th>
-                                            <i class="fas fa-eraser">
+                                            <i class="fas fa-eraser"></i>
                                         </th>
                                         <td>
                                             Cancellation
@@ -293,7 +293,17 @@
                                     </tr>
                                 </table>
                                 <br>
+                                <div class="text-center">
+                                    <small><b>3, 5, 7 or 14 Nights From</b></small>
+                                <h4>$1,060 <small>per person</small></h4>
+                                <p>valued at $16,000</p>
+                                </div>
                                 <br>
+                                
+                                    <button type="submit" class="btn btn-info btn-block">Book Now</button>
+                                    <button type="submit" class="btn btn-outline-info btn-block">Create Custom Package</button>
+                                
+                                <p class="text-right"><small>Save $150 with <b>COUPON15</b> code</small></p>
                             </div>
                         </div>
                     </div>
@@ -306,12 +316,47 @@
                         <div class="card">
                             <!-- Title Card -->
                             <div class="col-md-1"></div>
-                            <div class="col-md-5">
-                                <h2 class="display-6 card-title">ABOUT</h2>
+                            
+                            
+                            <div class="col overview collapsein">
+                                <h2 class="display-6 card-title">OVERVIEW</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col accomodation collapse">
+                                <h2 class="display-6 card-title">ACCOMODATION</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col facilities collapse">
+                                <h2 class="display-6 card-title">FACILITIES</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col food collapse">
+                                <h2 class="display-6 card-title">FOOD</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col activities collapse">
+                                <h2 class="display-6 card-title">ACTIVITIES</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col location collapse">
+                                <h2 class="display-6 card-title">LOCATION</h2>
+                                <hr class="ben-hr">
+                            </div>
+                            
+                            <div class="col fineprint collapse">
+                                <h2 class="display-6 card-title">FINE PRINT</h2>
                                 <hr class="ben-hr">
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
+                                <div class="location collapse">
+                                    <img src="https://www.google.com/maps/about/images/mymaps/mymaps-desktop-16x9.png" class="img-fluid" alt="Responsive image">
+                                </div>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate lacus eu ipsum euismod elementum. Nullam convallis tempus ante, a bibendum nibh placerat non. Nulla accumsan massa vel rutrum accumsan. Aliquam a risus ac ex dapibus porta nec a libero. Quisque pellentesque dapibus erat ac molestie. Sed tristique dui lectus, a ornare turpis facilisis ut. Nunc vel magna ac neque elementum pretium at quis lacus. Suspendisse auctor condimentum quam, eu eleifend ipsum. Ut vitae mi condimentum, vestibulum metus eu, placerat orci. Sed ut lorem id velit rhoncus suscipit. Mauris eget tortor leo. Cras mollis lectus a congue scelerisque. Curabitur molestie facilisis enim quis elementum. Nunc laoreet turpis ut lacus faucibus iaculis.
                                     <br>
@@ -487,12 +532,12 @@
         <div class="col-md-1"></div>
         </div>
 
-            </div>
+     
 
 
            
 
-        </div>
+     
         <br>
         <br>
         <br>
@@ -506,7 +551,83 @@
 
     <br>
 
-
+<script>
+$(document).ready(function(){
+    $(".overview").collapse('show');
+    
+  $(".btn-overview").click(function(){
+    $(".accomodation").collapse('hide');
+    $(".facilities").collapse('hide');
+    $(".food").collapse('hide');
+    $(".activities").collapse('hide');
+    $(".location").collapse('hide');
+    $(".fineprint").collapse('hide');
+      
+      $(".overview").collapse('show');
+  });
+  $(".btn-accomodation").click(function(){
+    $(".overview").collapse('hide');
+    $(".facilities").collapse('hide');
+    $(".food").collapse('hide');
+    $(".activities").collapse('hide');
+    $(".location").collapse('hide');
+    $(".fineprint").collapse('hide');
+      
+          $(".accomodation").collapse('show');
+  });
+    $(".btn-facilities").click(function(){
+        $(".overview").collapse('hide');
+        $(".accomodation").collapse('hide');
+        $(".food").collapse('hide');
+        $(".activities").collapse('hide');
+        $(".location").collapse('hide');
+        $(".fineprint").collapse('hide');
+        
+        $(".facilities").collapse('show');
+  });
+    $(".btn-food").click(function(){
+        $(".overview").collapse('hide');
+        $(".accomodation").collapse('hide');
+        $(".facilities").collapse('hide');
+        $(".activities").collapse('hide');
+        $(".location").collapse('hide');
+        $(".fineprint").collapse('hide');
+        
+        $(".food").collapse('show');
+  });
+    $(".btn-activities").click(function(){
+        $(".overview").collapse('hide');
+        $(".accomodation").collapse('hide');
+        $(".facilities").collapse('hide');
+        $(".food").collapse('hide');
+        $(".location").collapse('hide');
+        $(".fineprint").collapse('hide');
+        
+        $(".activities").collapse('show');
+  });
+    $(".btn-location").click(function(){
+        $(".overview").collapse('hide');
+        $(".accomodation").collapse('hide');
+        $(".facilities").collapse('hide');
+        $(".food").collapse('hide');
+        $(".activities").collapse('hide');
+        $(".fineprint").collapse('hide');
+        
+        $(".location").collapse('show');
+  });
+    $(".btn-fineprint").click(function(){
+        $(".overview").collapse('hide');
+        $(".accomodation").collapse('hide');
+        $(".facilities").collapse('hide');
+        $(".food").collapse('hide');
+        $(".activities").collapse('hide');
+        $(".location").collapse('hide');
+        
+        
+        $(".fineprint").collapse('show');
+  });
+});
+</script>
  
 
 </body>
